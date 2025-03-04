@@ -63,7 +63,7 @@ namespace state {
 	}
 
 	inline u64_4 nonzero(const u64_4 lhs) {
-		return _mm256_cmpeq_epi64(lhs.data, _mm256_setzero_si256()) + u64_4(1);
+		return _mm256_cmpeq_epi64(lhs.data, _mm256_setzero_si256()) + u64_4(1).data;
 	}
 
 	inline __m128i hor(const u64_4 lhs) {
